@@ -1,0 +1,108 @@
+CREATE TABLE EMPLOYEE(EmployeeID Integer, FirstName varchar(255), LastName varchar(255));
+INSERT INTO EMPLOYEE(EmployeeID, FirstName, LastName)
+VALUES (2151, 'Mark','Farley');
+
+INSERT INTO EMPLOYEE(EmployeeID, FirstName, LastName)
+VALUES (2152, 'Hansel','Tan');
+
+INSERT INTO EMPLOYEE(EmployeeID, FirstName, LastName)
+VALUES (2153, 'Alex','Todorow');
+
+INSERT INTO EMPLOYEE(EmployeeID, FirstName, LastName)
+VALUES (2154, 'Alex','Fucito');
+
+CREATE TABLE EMPLOYEE(EmployeeID Integer, FirstName varchar(255), LastName varchar(255));
+INSERT INTO EMPLOYEE(EmployeeID, FirstName, LastName)
+VALUES (2151, 'Mark','Farley');
+
+CREATE TABLE SUPPLIES (SuppliesID Integer, SupplyName varchar(255), SupplyBrand varchar(255));
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1001, 'Forks','Cosco');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1002, 'Spoons','Cosco');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1003, 'Plates','Cosco');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1004, 'Napkins','Cosco');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1005, 'Tables','Chapman & Sons');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1006, 'Chairs','Chapman & Sons');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1007, 'Blender','Cosco');
+
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1008, 'Knives','Cosco');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1009, 'CuttingBoard','Cosco');
+
+INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
+VALUES (1010, 'Containers','Cosco');
+
+/*This is the menu table*/
+CREATE TABLE MENU(MenuID integer NOT NULL PRIMARY KEY, MenuName varchar(255), MenuType varchar(255)
+VALUES (3001, 'Cobb Salad' , 'Salad');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3002, 'Caesar Salad' , 'Salad');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3003, 'Greek Salad' , 'Salad');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3004, 'Cubano' , 'Sandwich');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3005, 'Portabello' , 'Sandwich');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3006, 'Italian' , 'Sandwich');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3007, 'Turkey Hummus' , 'Wrap');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3008, 'Turkey Club' , 'Wrap');
+
+INSERT INTO MENU(MenuID, MenuName, MenuType)
+VALUES (3009, 'Chicken Salad' , 'Wrap');
+
+/*This is the beverage table*/
+CREATE TABLE BEVERAGES(BeverageID integer, BeverageName varchar(255), BeverageType varchar(255));
+INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
+VALUES (4001, 'Coke' , 'Bottle');
+
+INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
+VALUES (4002, 'Snapple' , 'Bottle');
+
+INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
+VALUES (4003, 'Poland Spring' , 'Bottle');
+
+INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
+VALUES (4004, 'Sprite' , 'Bottle');
+
+INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
+VALUES (4005, 'Coconut Water' , 'Bottle');
+
+INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
+VALUES (4006, 'Cream Soda' , 'Bottle');
+
+ALTER TABLE BEVERAGES
+ADD PRIMARY KEY(BEVERAGEID);
+
+ALTER TABLE EMPLOYEE
+ADD PRIMARY KEY(EMPLOYEEID);
+
+ALTER TABLE MENU
+ADD PRIMARY KEY(MENUID);
+
+ALTER TABLE SUPPLIES
+ADD PRIMARY KEY(SUPPLIESID);
