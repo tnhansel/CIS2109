@@ -48,7 +48,12 @@ INSERT INTO SUPPLIES(SuppliesID, SupplyName, SupplyBrand)
 VALUES (1010, 'Containers','Cosco');
 
 /*This is the menu table*/
-CREATE TABLE MENU(MenuID integer NOT NULL PRIMARY KEY, MenuName varchar(255), MenuType varchar(255)
+CREATE TABLE MENU(MenuID integer, 
+MenuName varchar(255), 
+MenuType varchar(255)
+CONSTRAINT employee pk_menu
+FOREIGN KEY (EmployeeID)
+references EMPLOYEE(EmployeeID));
 VALUES (3001, 'Cobb Salad' , 'Salad');
 
 INSERT INTO MENU(MenuID, MenuName, MenuType)
@@ -76,7 +81,12 @@ INSERT INTO MENU(MenuID, MenuName, MenuType)
 VALUES (3009, 'Chicken Salad' , 'Wrap');
 
 /*This is the beverage table*/
-CREATE TABLE BEVERAGES(BeverageID integer, BeverageName varchar(255), BeverageType varchar(255));
+CREATE TABLE BEVERAGES(BeverageID integer,
+BeverageName varchar(255),
+BeverageType varchar(255)
+CONSTRAINT employee pk_beverage
+FOREIGN KEY (EmployeeID)
+references EMPLOYEE(EmployeeID));
 INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
 VALUES (4001, 'Coke' , 'Bottle');
 
@@ -94,15 +104,3 @@ VALUES (4005, 'Coconut Water' , 'Bottle');
 
 INSERT INTO BEVERAGES(BeverageID, BeverageName, BeverageType)
 VALUES (4006, 'Cream Soda' , 'Bottle');
-
-ALTER TABLE BEVERAGES
-ADD PRIMARY KEY(BEVERAGEID);
-
-ALTER TABLE EMPLOYEE
-ADD PRIMARY KEY(EMPLOYEEID);
-
-ALTER TABLE MENU
-ADD PRIMARY KEY(MENUID);
-
-ALTER TABLE SUPPLIES
-ADD PRIMARY KEY(SUPPLIESID);
